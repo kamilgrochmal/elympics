@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aspnetapi-config
+data:
+  postgresqlConnectionString: "Host=myreleasev1-postgresql;Port=5432;Username=testuser;Password=testpass;Database=testdb"
+  gowebapiUrl: http://myreleasev1-gowebapi:8082

@@ -1,0 +1,59 @@
+aspnetapi:
+  replicaCount: 1
+  image:
+    repository: grochu/elympicsnetapi
+    pullPolicy: Always
+    tag: "latest"
+  service:
+    type: LoadBalancer
+    port: 8080
+  postgresqlHost:
+  env:
+    - name: postgres__connectionString
+      valueFrom:
+        configMapKeyRef:
+          name: aspnetapi-config
+          key: postgresqlConnectionString
+    - name: gowebapi__url
+      valueFrom:
+        configMapKeyRef:
+          name: aspnetapi-config
+          key: gowebapiUrl
+    - name: entry__maxFetchedAmount
+      value: "3"
+  serviceAccount:
+    create: false
+  ingress:
+    enabled: false
+    annotations: {}
+  dbhost:
+  autoscaling:
+    enabled: false
+
+gowebapi:
+  replicaCount: 1
+  image:
+    repository: grochu/elympicsgowebapi
+    pullPolicy: Always
+    tag: "latest"
+  service:
+    type: ClusterIP
+    port: 8082
+  autoscaling:
+    enabled: false
+  ingress:
+    enabled: false
+    annotations: {}
+  serviceAccount:
+    create: false
+
+postgresql:
+  global:
+    postgresql:
+      auth:
+        username: "testuser"
+        password: "testpass"
+        database: "testdb"
+      service:
+        ports:
+          postgresql: "5432"

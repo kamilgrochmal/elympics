@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "403413f0-6dac-4828-af20-ef07a80c4792",
+		"name": "Elympics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16543025"
+	},
+	"item": [
+		{
+			"name": "GetPodcasts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains 3 items\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(jsonData.length).to.eql(3);\r",
+							"\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains Musisz wiedzieć item\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"    var containsMustKnowPodcast = jsonData.some(function (item) {\r",
+							"        return item.title === \"Musisz wiedzieć\"; \r",
+							"    });\r",
+							"\r",
+							"    pm.expect(containsMustKnowPodcast).to.be.true;\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/podcasts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"podcasts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

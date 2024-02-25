@@ -1,0 +1,6 @@
+@ElympicsNet.Api_HostAddress = http://localhost:5003
+
+GET {{ElympicsNet.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

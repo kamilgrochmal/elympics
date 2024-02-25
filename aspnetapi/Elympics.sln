@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F25C3E6B-5876-4283-B325-A387B1152EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElympicsNet.Api", "src\ElympicsNet.Api\ElympicsNet.Api.csproj", "{578426C9-C3D0-473A-A5D5-6CBA20B2B7DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3A6280BE-4CD1-446F-8247-FA3D7952E861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElympicsNet.Api.Tests.Integration", "tests\ElympicsNet.Api.Tests.Integration\ElympicsNet.Api.Tests.Integration.csproj", "{638B204E-B0DE-45B8-99F0-7E0A838C3D06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{578426C9-C3D0-473A-A5D5-6CBA20B2B7DA} = {F25C3E6B-5876-4283-B325-A387B1152EAD}
+		{638B204E-B0DE-45B8-99F0-7E0A838C3D06} = {3A6280BE-4CD1-446F-8247-FA3D7952E861}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{578426C9-C3D0-473A-A5D5-6CBA20B2B7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578426C9-C3D0-473A-A5D5-6CBA20B2B7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578426C9-C3D0-473A-A5D5-6CBA20B2B7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578426C9-C3D0-473A-A5D5-6CBA20B2B7DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638B204E-B0DE-45B8-99F0-7E0A838C3D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638B204E-B0DE-45B8-99F0-7E0A838C3D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638B204E-B0DE-45B8-99F0-7E0A838C3D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638B204E-B0DE-45B8-99F0-7E0A838C3D06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
