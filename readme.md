@@ -86,6 +86,13 @@ Worth mentioning, gowebpi returns random podcast object, which consists of rando
 
 ## Installation and Setup
 
+
+| WARNING                                                                                                                                                            |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Mind the paths, they are adjusted to Windows environment*. If you want to run it on macOS or linux, exchange **'\\'** with **'/'** in places where they are used. |
+
+
+
 1. Install Docker https://docs.docker.com/engine/install/
 2. Install Minikube https://minikube.sigs.k8s.io/docs/start/
 3. Install newman https://blog.postman.com/installing-newman-on-windows/ (If you don't have Windows, then look up for other OS versions)
