@@ -16,6 +16,12 @@ internal sealed class DatabaseInitializer : IHostedService
     {
         using var scope = _serviceProvider.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+        if (!await dbContext.Database.CanConnectAsync(cancellationToken))
+        {
+            await Task.Delay(TimeSpan.FromSeconds(5), cancellationToken);
+        }
+        
         await dbContext.Database.MigrateAsync(cancellationToken);
 
         if (await dbContext.Podcasts.AnyAsync(cancellationToken))
